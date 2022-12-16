@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+}
+
+@font-face {
+  font-family: MrsSaintDelafield;
+  src: url(./Fonts/Mrs_Saint_Delafield/MrsSaintDelafield-Regular.ttf);
+}
+
+@font-face {
+  font-family: GreatVibes;
+  src: url(./Fonts/Great_Vibes/GreatVibes-Regular.ttf);
+}
+
+@font-face {
+  font-family: Philosopher;
+  src: url(./Fonts/Philosopher/Philosopher-Regular.ttf);
+}
+
+@font-face {
+  font-family: Salsa;
+  src: url(./Fonts/Salsa/Salsa-Regular.ttf);
+}
+
+@font-face {
+  font-family: MedulaOne;
+  src: url(./Fonts/Medula_One/MedulaOne-Regular.ttf);
+}
+
+::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar
+{
+	width: 6px;
+	background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb
+{
+	background-color: #000000;
+}
+
+body{
+  padding: 0;
+  margin: 0;
+  background-color: #dfc4a7;
+  overflow-y: hidden;
+}
+
+*{
+  text-decoration: none !important;
+}
+
+.custom-font-1{
+  font-family: MrsSaintDelafield;
+}
+
+.custom-font-2{
+  font-family: GreatVibes;
+}
+
+.custom-font-3{
+  font-family: Philosopher;
+}
+
+.custom-font-4{
+  font-family: Salsa;
+}
+
+.custom-font-5{
+  font-family: MedulaOne;
+}
+
+.arial{
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.cover-1{
+  background-size: cover;
+  background-position: top;
+}
+
+.bg-akad{
+  background-size: cover;
+  background-position: center;
+}
+
+.bg-resepsi{
+  background-size: cover;
+  background-position: center;
+}
