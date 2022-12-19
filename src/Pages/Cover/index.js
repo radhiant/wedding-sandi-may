@@ -7,7 +7,7 @@ import hiasan1 from '../../Img/hiasan-1.png'
 export default function Cover({ transformUp, onClick }) {
     return (
         <>
-            <div className={`fixed w-full h-full z-10 ${transformUp === true ? 'translate-y-[-700px] opacity-0' : ''} duration-700 cover-1`}>
+            <div className={`fixed w-full h-full z-20 ${transformUp === true ? 'translate-y-[-700px] opacity-0' : ''} duration-700 cover-1`}>
                 <div className='absolute bg-[#dfc4a7] w-full h-full'></div>
                 <div className='absolute w-full h-full'>
                     <div className='absolute top-1/4 left-0 right-0'>

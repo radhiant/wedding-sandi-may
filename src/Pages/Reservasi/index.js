@@ -7,6 +7,9 @@ import hiasan1 from '../../Img/hiasan-1.png'
 import db from '../../Constants/firebase'
 import { collection, addDoc, query, onSnapshot, serverTimestamp, orderBy } from 'firebase/firestore';
 import moment from 'moment/moment';
+// importing aos
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import 'moment/locale/id'  // without this line it didn't work
 import Swal from 'sweetalert2';
 moment.locale('id')
@@ -145,17 +148,18 @@ export default function Reservasi() {
         }
         Fetchdata();
         countdownTimer();
+        AOS.init();
     }, []);
 
     return (
         <>
-            <div className='my-16'>
+            <div id="gift" className='my-16'>
                 <div className='flex justify-center mb-8'>
-                    <img src={hiasan1} alt='hiasan1' className='w-[80px]' />
+                    <img src={hiasan1} data-aos="fade-up" alt='hiasan1' className='w-[80px]' />
                 </div>
-                <h1 className='text-center text-2xl font-semibold custom-font-3 mx-4 text-[#413327]'>Menuju Waktu Acara</h1>
-                <h1 className='text-center text-4xl font-semibold custom-font-3 mx-4 mb-8 text-[#413327]'>Pernikahan Kami</h1>
-                <div className='flex justify-center gap-4 mb-8'>
+                <h1 data-aos="fade-up" className='text-center text-2xl font-semibold custom-font-3 mx-4 text-[#413327]'>Menuju Waktu Acara</h1>
+                <h1 data-aos="fade-up" className='text-center text-4xl font-semibold custom-font-3 mx-4 mb-8 text-[#413327]'>Pernikahan Kami</h1>
+                <div data-aos="fade-up" className='flex justify-center gap-4 mb-8'>
                     <div className='rounded-xl md:w-[200px] w-[80px] py-6 bg-[#413327] text-center custom-font-3 text-white'>
                         <h1 className='md:text-5xl text-xl font-bold'>{countdownTime.countdownDays}</h1>
                         <p className='md:text-lg text-xs font-semibold'>Hari</p>
@@ -173,8 +177,8 @@ export default function Reservasi() {
                         <p className='md:text-lg text-xs font-semibold'>Detik</p>
                     </div>
                 </div>
-                <h1 className='text-center text-2xl font-semibold custom-font-3 mx-4 text-[#413327] mb-4'>Untuk Yang Berhalangan Hadir, Kami Tambahkan Fitur Dibawah Ini</h1>
-                <div className='flex justify-center'>
+                <h1 data-aos="fade-up" className='text-center text-2xl font-semibold custom-font-3 mx-4 text-[#413327] mb-4'>Untuk Yang Berhalangan Hadir, Kami Tambahkan Fitur Dibawah Ini</h1>
+                <div data-aos="fade-up" className='flex justify-center'>
                     <button type="button" onClick={() => openAmplop()} className="text-white shadow-lg text-md bg-[#413327] hover:bg-[#31261d] font-bold rounded-xl px-5 py-3.5 mr-2 mb-2">
                         <FontAwesomeIcon icon={faMoneyBill1} /> Amplop
                     </button>
@@ -184,8 +188,8 @@ export default function Reservasi() {
                 </div>
             </div>
             <div className='mt-16 bg-[#413327] py-8'>
-                <h1 className='text-center text-white text-3xl font-semibold custom-font-3 mx-4 mb-4'>Konfirmasi Kehadiran</h1>
-                <div className='max-w-lg mx-auto mb-16'>
+                <h1 data-aos="fade-up" className='text-center text-white text-3xl font-semibold custom-font-3 mx-4 mb-4'>Konfirmasi Kehadiran</h1>
+                <div data-aos="fade-up" className='max-w-lg mx-auto mb-16'>
                     <div className='mx-4'>
                         <input value={rsvpNama} onChange={(e) => { setRsvpNama(e.target.value) }} type="text" autoComplete='off' id="first_name" class="bg-gray-50 text-[#413327] border border-gray-300 font-bold text-sm rounded-lg focus:ring-[#fbeeee] focus:border-[#fbeeee] block w-full p-2.5 mb-2" placeholder="Isi Nama" />
                         <input type="text" value={rsvpTamu} onChange={(e) => { setRsvpTamu(e.target.value) }} autoComplete='off' id="first_name" class="bg-gray-50 text-[#413327] border border-gray-300 font-bold text-sm rounded-lg focus:ring-[#fbeeee] focus:border-[#fbeeee] block w-full p-2.5 mb-2" placeholder="Jumlah Tamu" />
@@ -205,9 +209,9 @@ export default function Reservasi() {
                         </button>
                     </div>
                 </div>
-                <h1 className='text-center text-white text-2xl font-semibold custom-font-3 mx-4'>Kirim Pesan</h1>
-                <h1 className='text-center text-white md:text-4xl text-2xl font-semibold custom-font-3 mx-4 mb-4'>Untuk Kedua Mempelai</h1>
-                <div className='max-w-lg mx-auto mb-16'>
+                <h1 data-aos="fade-up" className='text-center text-white text-2xl font-semibold custom-font-3 mx-4'>Kirim Pesan</h1>
+                <h1 data-aos="fade-up" className='text-center text-white md:text-4xl text-2xl font-semibold custom-font-3 mx-4 mb-4'>Untuk Kedua Mempelai</h1>
+                <div data-aos="fade-up" className='max-w-lg mx-auto mb-16'>
                     <div className='mx-4'>
                         <input autoComplete='off' type="text" value={formNama} onChange={(e) => { setFormNama(e.target.value) }} id="first_name" class="bg-gray-50 text-[#413327] border border-gray-300 font-bold text-sm rounded-lg focus:ring-[#fbeeee] focus:border-[#fbeeee] block w-full p-2.5 mb-2" placeholder="Isi Nama" />
                         <textarea autoComplete='off' id="message" rows="4" onChange={(e) => { setFormPesan(e.target.value) }} class="block p-2.5 w-full text-sm text-[#413327] font-bold bg-gray-50 rounded-lg border border-gray-300 focus:ring-[#fbeeee] focus:border-[#fbeeee] mb-2" value={formPesan} placeholder="Pesan"></textarea>

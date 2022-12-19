@@ -1,17 +1,24 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { nama_pasangan } from '../../Constants/global'
 import '../../css/waves.css'
-import cover from '../../Img/cover-1.webp'
-import cover2 from '../../Img/gallery-7.webp'
-export default function Home() {
+import cover from '../../Img/compress/gallery-1.webp'
+import cover2 from '../../Img/compress/gallery-7.webp'
+// importing aos
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+export default function Home({fadeIn}) {
+    useEffect(() => {
+        AOS.init();
+    }, [])
     return (
         <>
-            <div className="landing-animation w-full bg-cover" style={{  backgroundImage: window.innerWidth > 992 ? `url(${cover2})` : `url(${cover})` }}>
+            <div id="home" className="landing-animation w-full bg-cover" style={{ backgroundImage: window.innerWidth > 992 ? `url(${cover2})` : `url(${cover})` }}>
                 <div className='absolute h-screen bg-black/50 w-full'></div>
                 <div className='absolute h-screen w-full'>
-                    <div className='absolute top-2/4 left-0 right-0'>
-                        <div className='text-center'>
-                            <div className='text-gray-200 font-bold text-lg mb-4'>
+                    <div className='absolute top-1/3 left-0 right-0'>
+                        <div className={`text-center ${fadeIn === true ? 'scale-100' : 'scale-0'} duration-1000`}>
+                            <div className='text-gray-200 font-bold text-lg mb-4 mt-16'>
                                 PERNIKAHAN
                             </div>
                             <div className='text-white custom-font-2 font-semibold md:text-6xl text-5xl mb-4'>
