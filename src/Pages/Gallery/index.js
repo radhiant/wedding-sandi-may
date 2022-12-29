@@ -5,7 +5,14 @@ import gallery1 from '../../Img/compress/gallery-1.webp'
 import gallery2 from '../../Img/compress/gallery-2.webp'
 import gallery3 from '../../Img/compress/gallery-3.webp'
 import gallery4 from '../../Img/compress/gallery-4.webp'
+import gallery5 from '../../Img/compress/gallery-5.webp'
+import gallery6 from '../../Img/compress/gallery-6.webp'
 import gallery7 from '../../Img/compress/gallery-7.webp'
+import gallery8 from '../../Img/compress/gallery-8.webp'
+import gallery9 from '../../Img/compress/gallery-9.webp'
+import gallery10 from '../../Img/compress/gallery-10.webp'
+import gallery11 from '../../Img/compress/gallery-11.webp'
+import gallery12 from '../../Img/compress/gallery-12.webp'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 export default function Gallery() {
@@ -29,7 +36,14 @@ export default function Gallery() {
                     gallery2,
                     gallery3,
                     gallery4,
+                    gallery5,
+                    gallery6,
                     gallery7,
+                    gallery8,
+                    gallery9,
+                    gallery10,
+                    gallery11,
+                    gallery12,
                 ]}
                 slide={gallerySlide}
             />
@@ -47,14 +61,35 @@ export default function Gallery() {
                             <div className='w-auto hover:scale-105 hover:cursor-pointer duration-300' onClick={() => bukaGallery(2)}>
                                 <img data-aos="fade-up" src={gallery2} loading="lazy" alt="gallery" className='rounded-xl' />
                             </div>
-                            <div className='w-auto hover:scale-105 hover:cursor-pointer duration-300' onClick={() => bukaGallery(3)}>
-                                <img data-aos="fade-up" src={gallery3} loading="lazy" alt="gallery" className='rounded-xl' />
-                            </div>
                             <div className='w-auto hover:scale-105 hover:cursor-pointer duration-300' onClick={() => bukaGallery(4)}>
                                 <img data-aos="fade-up" src={gallery4} loading="lazy" alt="gallery" className='rounded-xl' />
                             </div>
-                            <div className='w-auto col-span-2 hover:scale-105 hover:cursor-pointer duration-300' onClick={() => bukaGallery(5)}>
+                            <div className='w-auto hover:scale-105 hover:cursor-pointer duration-300' onClick={() => bukaGallery(5)}>
+                                <img data-aos="fade-up" src={gallery5} loading="lazy" alt="gallery" className='rounded-xl' />
+                            </div>
+                            <div className='w-auto col-span-2 hover:scale-105 hover:cursor-pointer duration-300' onClick={() => bukaGallery(3)}>
+                                <img data-aos="fade-up" src={gallery3} loading="lazy" alt="gallery" className='rounded-xl' />
+                            </div>
+                            <div className='w-auto col-span-2 hover:scale-105 hover:cursor-pointer duration-300' onClick={() => bukaGallery(6)}>
+                                <img data-aos="fade-up" src={gallery6} loading="lazy" alt="gallery" className='rounded-xl' />
+                            </div>
+                            <div className='w-auto hover:scale-105 hover:cursor-pointer duration-300' onClick={() => bukaGallery(7)}>
                                 <img data-aos="fade-up" src={gallery7} loading="lazy" alt="gallery" className='rounded-xl' />
+                            </div>
+                            <div className='w-auto hover:scale-105 hover:cursor-pointer duration-300' onClick={() => bukaGallery(12)}>
+                                <img data-aos="fade-up" src={gallery12} loading="lazy" alt="gallery" className='rounded-xl' />
+                            </div>
+                            <div className='w-auto hover:scale-105 hover:cursor-pointer duration-300' onClick={() => bukaGallery(9)}>
+                                <img data-aos="fade-up" src={gallery9} loading="lazy" alt="gallery" className='rounded-xl' />
+                            </div>
+                            <div className='w-auto hover:scale-105 hover:cursor-pointer duration-300' onClick={() => bukaGallery(8)}>
+                                <img data-aos="fade-up" src={gallery8} loading="lazy" alt="gallery" className='rounded-xl' />
+                            </div>
+                            <div className='w-auto hover:scale-105 hover:cursor-pointer duration-300' onClick={() => bukaGallery(11)}>
+                                <img data-aos="fade-up" src={gallery11} loading="lazy" alt="gallery" className='rounded-xl' />
+                            </div>
+                            <div className='w-auto hover:scale-105 hover:cursor-pointer duration-300' onClick={() => bukaGallery(10)}>
+                                <img data-aos="fade-up" src={gallery10} loading="lazy" alt="gallery" className='rounded-xl' />
                             </div>
                         </div>
                     </div>
