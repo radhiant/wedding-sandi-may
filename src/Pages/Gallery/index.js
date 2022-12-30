@@ -34,16 +34,16 @@ export default function Gallery() {
                 sources={[
                     gallery1,
                     gallery2,
-                    gallery3,
                     gallery4,
                     gallery5,
+                    gallery3,
                     gallery6,
                     gallery7,
-                    gallery8,
-                    gallery9,
-                    gallery10,
-                    gallery11,
                     gallery12,
+                    gallery9,
+                    gallery8,
+                    gallery11,
+                    gallery10,
                 ]}
                 slide={gallerySlide}
             />

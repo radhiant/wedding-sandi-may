@@ -5,6 +5,11 @@ import { nama_pasangan } from '../../Constants/global'
 import hiasan1 from '../../Img/hiasan-1.png'
 
 export default function Cover({ transformUp, onClick }) {
+    // useEffect(() => {
+    //     let url = new URL(window.location.origin);
+    //     let searchParams = new URLSearchParams(url.search);
+    //     console.log(searchParams.get('to'));
+    // })
     return (
         <>
             <div className={`fixed w-full h-full z-20 ${transformUp === true ? 'translate-y-[-700px] opacity-0' : ''} duration-700 cover-1`}>
